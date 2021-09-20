@@ -74,6 +74,7 @@ public class SynapseDocsBuilderImpl implements SynapseDocsBuilder {
 		} catch (IOException e) {
 		}
 		*/
+		System.out.println("note");
 		String sourceBucket = "dev.release.rest.doc.sagebase.org";
 		String prefix = "";
 		String destinationBucket = "test.docs.bucket";
