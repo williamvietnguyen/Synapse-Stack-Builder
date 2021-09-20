@@ -85,10 +85,6 @@ public class SynapseDocsBuilderImpl implements SynapseDocsBuilder {
 		Set<String> destinationObjectKeySet = new HashSet<>();
 		destinationObjectsStream.forEach(obj -> destinationObjectKeySet.add(obj.getKey()));
 		for (S3ObjectSummary sourceObject : sourceObjects.getObjectSummaries()) {
-			if (destinationObjectKeySet.contains(sourceObject.getKey())) {
-				s3Client.deleteObject(destinationBucket, sourceObject.getKey());
-				destinationObjectKeySet.remove(sourceObject.getKey());
-			}
 			transferManager.copy(sourceBucket, sourceObject.getKey(), 
 					destinationBucket, sourceObject.getKey());
 		}
