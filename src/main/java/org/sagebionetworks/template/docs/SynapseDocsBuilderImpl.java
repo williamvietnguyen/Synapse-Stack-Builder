@@ -42,6 +42,7 @@ public class SynapseDocsBuilderImpl implements SynapseDocsBuilder {
 	
 	@Override
 	public boolean deployDocs() {
+		/*
 		String stack = config.getProperty(PROPERTY_KEY_STACK);
 		if (!stack.equals(Constants.PROD_STACK_NAME)) {
 			return false;
@@ -72,7 +73,7 @@ public class SynapseDocsBuilderImpl implements SynapseDocsBuilder {
 			writer.write(prodInstance);
 			writer.close();
 		} catch (IOException e) {
-		}
+		}*/
 		String devDocsBucket = config.getProperty(PROPERTY_KEY_DEV_RELEASE_DOCS_BUCKET);
 		String docsBucket = config.getProperty(PROPERTY_KEY_REST_DOCS_BUCKET);
 		String prefix = "";
